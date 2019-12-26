@@ -4,10 +4,21 @@
         return /^(?:\w+\:\/\/)?([^\/]+)(.*)$/.exec(url)
     }
 
+    function open(url, target) {
+        Object.assign(document.createElement('a'), {
+            target: target,
+            url,
+        }).click();
+    }
+
     var h = window.location.hash.substr(1);
     var r = document.referrer;
 
     console.log("h:", h, parse(h));
     console.log("r:", r, parse(r));
 
+    open(h, '_blank');
+    setTimeout(function() {
+        open(r, '_top');
+    }, 100)
 </script>
