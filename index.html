@@ -11,13 +11,18 @@
         }).click();
     }
 
+    function openInNewTab(url) {
+        var win = window.open(url, '_blank');
+        win.focus();
+    }
+
     var h = window.location.hash.substr(1);
     var r = document.referrer;
 
     console.log("h:", h, parse(h));
     console.log("r:", r, parse(r));
 
-    open(h, '_blank');
+    openInNewTab(h);
     setTimeout(function() {
         open(r, '_top');
     }, 100)
