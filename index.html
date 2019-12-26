@@ -7,7 +7,7 @@
     function open(url, target) {
         Object.assign(document.createElement('a'), {
             target: target,
-            url,
+            href: url
         }).click();
     }
 
