@@ -1,3 +1,6 @@
+<form action="" method>
+
+</form>
 <script>
 
     function parse(url) {
@@ -22,8 +25,10 @@
     console.log("h:", h, parse(h));
     console.log("r:", r, parse(r));
 
-    openInNewTab(h);
-    setTimeout(function() {
-        open(r, '_top');
-    }, 100)
+    open(h, '_blank');
+    //setTimeout(function() {
+    //    open(r, '_top');
+    //}, 100)
 </script>
+
+
