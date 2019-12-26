@@ -4,10 +4,10 @@
         return /^(?:\w+\:\/\/)?([^\/]+)(.*)$/.exec(url)
     }
 
-    var h = window.location.hash
-    var r = document.referrer
+    var h = window.location.hash.substr(1);
+    var r = document.referrer;
 
-    console.log("h:", h, parse(h))
-    console.log("r:", r, parse(r))
+    console.log("h:", h, parse(h));
+    console.log("r:", r, parse(r));
 
 </script>
