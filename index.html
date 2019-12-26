@@ -1,9 +1,13 @@
 <script>
 
+    function parse(url) {
+        return /^(?:\w+\:\/\/)?([^\/]+)(.*)$/.exec(url)
+    }
+
     var h = window.location.hash
     var r = document.referrer
 
-    console.log("h:", h)
-    console.log("r:", r)
+    console.log("h:", h, parse(h))
+    console.log("r:", r, parse(r))
 
 </script>
