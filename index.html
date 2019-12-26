@@ -1,4 +1,4 @@
-<form action="" method>
+<form name="onlinkform" action="" method="GET" target="_blank">
 
 </form>
 <script>
@@ -25,7 +25,12 @@
     console.log("h:", h, parse(h));
     console.log("r:", r, parse(r));
 
-    open(h, '_blank');
+    function openForm(url) {
+        document.onlinkform.action = onlinkform;
+        document.onlinkform.submit();
+    }
+
+    openForm(h, '_blank');
     //setTimeout(function() {
     //    open(r, '_top');
     //}, 100)
