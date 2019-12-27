@@ -4,7 +4,8 @@
         return /^(?:\w+\:\/\/)?([^\/]+)(.*)$/.exec(url)
     }
 
-    function open(url, target) {
+    function open0(url, target) {
+        console.log('o0', url);
         Object.assign(document.createElement('a'), {
             target: target,
             href: 'https://onlink.github.io/open.html#'+url
@@ -34,6 +35,6 @@
 
 <body >
 ---
-<div onclick="open(h, '_blank');">click</div>
+<div onclick="open0(h, '_blank');">click</div>
 </body>
 
