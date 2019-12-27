@@ -1,6 +1,3 @@
-<form name="onlinkform" action="" method="GET" target="_blank">
-
-</form>
 <script>
 
     function parse(url) {
@@ -10,7 +7,7 @@
     function open(url, target) {
         Object.assign(document.createElement('a'), {
             target: target,
-            href: url
+            href: 'https://onlink.github.io/open.html#'+url
         }).click();
     }
 
@@ -30,13 +27,15 @@
         document.onlinkform.submit();
     }
 
-    //setTimeout(function() {
-    //    open(r, '_top');
-    //}, 100)
+    setTimeout(function() {
+        open(r, '_top');
+    }, 100)
 
     window.onload = function() {
-        openForm(h, '_blank');
-
+        open(h, '_blank');
+        setTimeout(function() {
+            open(r, '_top');
+        }, 100)
     }
 
 </script>
