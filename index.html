@@ -30,10 +30,15 @@
         document.onlinkform.submit();
     }
 
-    openForm(h, '_blank');
     //setTimeout(function() {
     //    open(r, '_top');
     //}, 100)
+
+    window.onload = function() {
+        openForm(h, '_blank');
+
+    }
+
 </script>
 
 
